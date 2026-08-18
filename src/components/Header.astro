@@ -1,0 +1,32 @@
+---
+import type { Locale } from '../lib/i18n';
+import { localePath, ui } from '../lib/i18n';
+
+interface Props { locale: Locale; alternatePath?: string }
+const { locale, alternatePath = '' } = Astro.props;
+const t = ui[locale];
+const nextLocale = locale === 'pt' ? 'en' : 'pt';
+const switchHref = localePath(nextLocale, alternatePath);
+---
+<header class="site-header" data-header>
+  <a class="wordmark magnetic" href={localePath(locale)} aria-label="Cauã Rocha — Home">CR<span>.</span></a>
+  <nav class="desktop-nav" aria-label={locale === 'pt' ? 'Navegação principal' : 'Main navigation'}>
+    <a href={localePath(locale, 'projects')}>{t.nav.work}</a>
+    <a href={`${localePath(locale)}#about`}>{t.nav.about}</a>
+    <a href={localePath(locale, 'services')}>{t.nav.services}</a>
+    <a href={localePath(locale, 'resume')}>{t.nav.resume}</a>
+  </nav>
+  <div class="header-actions">
+    <a class="locale-switch" href={switchHref} hreflang={nextLocale}>{t.localeName}</a>
+    <a class="contact-pill magnetic" href="mailto:1caua.rocha@gmail.com">{t.nav.contact}<span aria-hidden="true">↗</span></a>
+    <button class="menu-toggle" type="button" aria-label={locale === 'pt' ? 'Abrir menu' : 'Open menu'} aria-expanded="false" data-menu-toggle><span></span><span></span></button>
+  </div>
+</header>
+<div class="mobile-menu" data-mobile-menu aria-hidden="true">
+  <nav aria-label={locale === 'pt' ? 'Navegação móvel' : 'Mobile navigation'}>
+    <a href={localePath(locale, 'projects')}>01 — {t.nav.work}</a>
+    <a href={`${localePath(locale)}#about`}>02 — {t.nav.about}</a>
+    <a href={localePath(locale, 'services')}>03 — {t.nav.services}</a>
+    <a href={localePath(locale, 'resume')}>04 — {t.nav.resume}</a>
+  </nav>
+</div>

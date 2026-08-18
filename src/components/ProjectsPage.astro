@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import type { Locale } from '../lib/i18n';
+import { ui } from '../lib/i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from './ProjectCard.astro';
+const { locale } = Astro.props as { locale: Locale };
+const t = ui[locale];
+const projects = (await getCollection('projects', ({ data }) => data.locale === locale)).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout {locale} title={`${t.nav.work} — Cauã Rocha`} alternatePath="projects">
+  <section class="page-hero shell">
+    <span class="eyebrow reveal">01 — {t.nav.work}</span>
+    <h1 class="reveal">{t.projectsTitle}</h1>
+    <p class="reveal">{t.projectsIntro}</p>
+  </section>
+  <section class="shell page-projects"><div class="project-grid">{projects.map((project, index) => <ProjectCard {project} {locale} {index} />)}</div></section>
+</BaseLayout>

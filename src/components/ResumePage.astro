@@ -1,0 +1,41 @@
+---
+import type { Locale } from '../lib/i18n';
+import { ui } from '../lib/i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+const { locale } = Astro.props as { locale: Locale };
+const t = ui[locale];
+const focus = locale === 'pt' ? ['Desenvolvimento de software', 'Dados e automação', 'Workflows com IA', 'Experiências digitais'] : ['Software development', 'Data and automation', 'AI workflows', 'Digital experiences'];
+const resumeFile = locale === 'pt' ? '/resume/caua-rocha-curriculo.pdf' : '/resume/caua-rocha-resume.pdf';
+const downloadLabel = locale === 'pt' ? 'Baixar currículo em PDF' : 'Download résumé PDF';
+const experience = locale === 'pt' ? [
+  { company: 'Prefeitura Municipal de Lavras', role: 'Técnico de Suporte em TI', period: 'Ago/2026 — Atual', detail: 'Suporte a ambientes municipais, estações Windows, redes, Active Directory e configuração inicial de Windows Server.' },
+  { company: 'EssilorLuxottica', role: 'Auxiliar de Logística Administrativa — Foco em Automação', period: 'Dez/2025 — Fev/2026', detail: 'Desenvolvimento de uma automação em Python para consolidar planilhas logísticas, reduzindo em 60% o tempo de processamento.' },
+] : [
+  { company: 'Municipality of Lavras', role: 'IT Support Technician', period: 'Aug 2026 — Present', detail: 'Support for municipal environments, Windows workstations, networks, Active Directory, and initial Windows Server configuration.' },
+  { company: 'EssilorLuxottica', role: 'Administrative Logistics Assistant — Automation Focus', period: 'Dec 2025 — Feb 2026', detail: 'Built a Python automation to consolidate logistics spreadsheets, reducing processing time by 60%.' },
+];
+const education = locale === 'pt' ? [
+  { school: 'Universidade Federal de Lavras (UFLA)', course: 'Bacharelado em Sistemas de Informação', period: 'Mar/2026 — Dez/2029 (previsto)' },
+  { school: 'Etec de Hortolândia', course: 'Técnico em Desenvolvimento de Sistemas', period: '2023 — 2025' },
+] : [
+  { school: 'Federal University of Lavras (UFLA)', course: 'B.Sc. in Information Systems', period: 'Mar 2026 — Dec 2029 (expected)' },
+  { school: 'Etec de Hortolândia', course: 'Technical Degree in Systems Development', period: '2023 — 2025' },
+];
+---
+<BaseLayout {locale} title={`${t.resumeTitle} — Cauã Rocha`} alternatePath="resume">
+  <section class="page-hero resume-hero shell">
+    <span class="eyebrow reveal">{t.resumeTitle}</span>
+    <h1 class="reveal">Cauã Rocha</h1>
+    <p class="reveal">{t.resumeIntro}</p>
+    <a class="button button-dark resume-download reveal" href={resumeFile} download>{downloadLabel}<Icon name="arrow" /></a>
+  </section>
+  <section class="resume-sheet shell reveal">
+    <div class="resume-identity"><span>Software Developer<br />& Data Enthusiast</span><p>cauarocha.dev<br />Lavras, MG — Brasil</p></div>
+    <div class="resume-block"><span>01</span><div><h2>{locale === 'pt' ? 'Perfil' : 'Profile'}</h2><p>{t.aboutText}</p></div></div>
+    <div class="resume-block"><span>02</span><div><h2>{locale === 'pt' ? 'Experiência' : 'Experience'}</h2><div class="resume-timeline">{experience.map((item) => <article><div><h3>{item.company}</h3><span>{item.period}</span></div><strong>{item.role}</strong><p>{item.detail}</p></article>)}</div></div></div>
+    <div class="resume-block"><span>03</span><div><h2>{locale === 'pt' ? 'Formação' : 'Education'}</h2><div class="resume-timeline compact">{education.map((item) => <article><div><h3>{item.school}</h3><span>{item.period}</span></div><strong>{item.course}</strong></article>)}</div></div></div>
+    <div class="resume-block"><span>04</span><div><h2>{locale === 'pt' ? 'Áreas de atuação' : 'Areas of work'}</h2><ul>{focus.map((item) => <li>{item}</li>)}</ul></div></div>
+    <div class="resume-block"><span>05</span><div><h2>Links</h2><div class="resume-links"><a href="mailto:1caua.rocha@gmail.com">Email <Icon name="external" /></a><a href="https://github.com/cauarocha1">GitHub <Icon name="external" /></a><a href="https://linkedin.com/in/rochacaua/">LinkedIn <Icon name="external" /></a></div></div></div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,26 @@
+---
+import { render, type CollectionEntry } from 'astro:content';
+import type { Locale } from '../lib/i18n';
+import { localePath, ui } from '../lib/i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+const { project, locale } = Astro.props as { project: CollectionEntry<'projects'>; locale: Locale };
+const { Content } = await render(project);
+const t = ui[locale];
+const slug = project.id.split('/').pop()?.replace(/\.mdx?$/, '') ?? project.data.translationKey;
+---
+<BaseLayout {locale} title={`${project.data.title} — Cauã Rocha`} description={project.data.summary} alternatePath={`projects/${slug}`} socialImage={project.data.images[0]?.src}>
+  <article class="case-page shell">
+    <a class="back-link reveal" href={localePath(locale, 'projects')}>← {t.back}</a>
+    <header class="case-header">
+      <div class="reveal"><span class="eyebrow">{project.data.eyebrow}</span><h1>{project.data.title}</h1></div>
+      <p class="reveal">{project.data.summary}</p>
+    </header>
+    {project.data.images[0] ? <figure class:list={["case-visual", "case-visual-media", "reveal", { "image-contain": project.data.imageFit === 'contain' }]}><img src={project.data.images[0].src} alt={project.data.images[0].alt} decoding="async" /></figure> : <div class="case-visual reveal" aria-hidden="true"><span>{project.data.translationKey.replaceAll('-', ' / ')}</span><div></div></div>}
+    <div class="case-content">
+      <aside class="reveal"><span>{locale === 'pt' ? 'Categoria' : 'Category'}</span><strong>{project.data.category}</strong><span>Stack</span><ul>{project.data.stack.map((item) => <li>{item}</li>)}</ul></aside>
+      <section class="prose reveal"><h2>{t.context}</h2><Content /><div class="case-actions">{project.data.live && <a class="button button-dark" href={project.data.live} target="_blank" rel="noreferrer">{locale === 'pt' ? 'Visitar projeto' : 'Visit project'}<Icon name="external" /></a>}{project.data.repo && <a class="button button-outline" href={project.data.repo} target="_blank" rel="noreferrer">{locale === 'pt' ? 'Abrir repositório' : 'Open repository'}<Icon name="external" /></a>}</div></section>
+    </div>
+    {project.data.images.length > 1 && <section class="case-gallery" aria-label={locale === 'pt' ? 'Telas do projeto' : 'Project screens'}>{project.data.images.slice(1).map((image) => <figure class="reveal"><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /></figure>)}</section>}
+  </article>
+</BaseLayout>

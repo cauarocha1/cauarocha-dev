@@ -1,0 +1,65 @@
+---
+import { getCollection } from 'astro:content';
+import type { Locale } from '../lib/i18n';
+import { localePath, ui } from '../lib/i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ProjectCard from './ProjectCard.astro';
+import Icon from './Icon.astro';
+
+const { locale } = Astro.props as { locale: Locale };
+const t = ui[locale];
+const projects = (await getCollection('projects', ({ data }) => data.locale === locale && data.featured)).sort((a, b) => a.data.order - b.data.order);
+---
+<BaseLayout {locale} alternatePath="">
+  <section class="hero shell">
+    <div class="hero-kicker reveal"><span class="status-dot"></span>{t.hero.eyebrow}</div>
+    <h1 class="reveal"><span>{t.hero.titleA}</span><strong>{t.hero.titleB}</strong></h1>
+    <div class="hero-bottom reveal">
+      <p>{t.hero.text}</p>
+      <div class="hero-actions">
+        <a class="button button-dark magnetic" href="#work">{t.hero.primary}<Icon name="arrow" /></a>
+        <a class="text-link" href="https://github.com/cauarocha1" target="_blank" rel="noreferrer">{t.hero.secondary}<Icon name="external" size={16} /></a>
+      </div>
+    </div>
+    <div class="hero-stamp" aria-hidden="true"><span>CR</span><small>25°33' S<br />49°16' W</small></div>
+  </section>
+
+  <section class="work-section shell" id="work">
+    <header class="section-heading reveal">
+      <div><span class="section-number">01</span><h2>{t.selected}</h2></div>
+      <p>{t.selectedText}</p>
+    </header>
+    <div class="project-grid">{projects.map((project, index) => <ProjectCard {project} {locale} {index} />)}</div>
+    <a class="all-work-link reveal" href={localePath(locale, 'projects')}><span>{t.allProjects}</span><Icon name="arrow" /></a>
+  </section>
+
+  <section class="about-section shell" id="about">
+    <header class="section-heading reveal"><div><span class="section-number">02</span><h2>{t.about}</h2></div></header>
+    <div class="about-grid">
+      <h3 class="reveal">{t.aboutTitle}</h3>
+      <div class="about-copy reveal">
+        <p>{t.aboutText}</p>
+        <ul>{t.disciplines.map((item, index) => <li><span>0{index + 1}</span>{item}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="rds-section shell reveal">
+    <div class="rds-card">
+      <div class="rds-monogram" aria-hidden="true">R<span>D</span>S</div>
+      <div class="rds-copy">
+        <span class="eyebrow">{t.rdsLabel}</span>
+        <h2>{t.rdsTitle}</h2>
+        <p>{t.rdsText}</p>
+        <a href={localePath(locale, 'services')}>{t.rdsCta}<Icon name="arrow" /></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section shell" id="contact">
+    <span class="eyebrow reveal">{t.contactLabel}</span>
+    <h2 class="reveal">{t.contactTitle}</h2>
+    <p class="reveal">{t.contactText}</p>
+    <a class="contact-email reveal" href="mailto:1caua.rocha@gmail.com"><span>1caua.rocha@gmail.com</span><Icon name="arrow" size={32} /></a>
+  </section>
+</BaseLayout>

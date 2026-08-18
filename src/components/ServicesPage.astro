@@ -1,0 +1,39 @@
+---
+import type { Locale } from '../lib/i18n';
+import { ui } from '../lib/i18n';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from './Icon.astro';
+const { locale } = Astro.props as { locale: Locale };
+const t = ui[locale];
+const services = locale === 'pt' ? [
+  ['01', 'Presença digital', 'Sites e páginas que transformam uma marca em uma experiência clara, rápida e confiável.'],
+  ['02', 'Automações com Python', 'Fluxos que reduzem trabalho repetitivo e conectam informações com mais consistência.'],
+  ['03', 'Dados & pipelines', 'Organização, transformação e entrega de dados para apoiar rotinas e decisões.'],
+  ['04', 'IA aplicada', 'Workflows com LLMs para interação inteligente e automação de conteúdo.'],
+] : [
+  ['01', 'Digital presence', 'Websites and pages that turn a brand into a clear, fast, and trustworthy experience.'],
+  ['02', 'Python automation', 'Workflows that reduce repetitive work and connect information more consistently.'],
+  ['03', 'Data & pipelines', 'Data organization, transformation, and delivery to support routines and decisions.'],
+  ['04', 'Applied AI', 'LLM-powered workflows for intelligent interaction and content automation.'],
+];
+const steps = locale === 'pt' ? [['Entender', 'Contexto, problema e prioridade.'], ['Definir', 'Escopo enxuto e solução adequada.'], ['Construir', 'Execução com checkpoints claros.'], ['Entregar', 'Publicação, documentação e próximos passos.']] : [['Understand', 'Context, problem, and priority.'], ['Define', 'Lean scope and the right solution.'], ['Build', 'Execution with clear checkpoints.'], ['Deliver', 'Launch, documentation, and next steps.']];
+---
+<BaseLayout {locale} title={`${t.rdsTitle} — Cauã Rocha`} alternatePath="services">
+  <section class="page-hero services-hero shell">
+    <span class="eyebrow reveal">RDS — {t.rdsLabel}</span>
+    <h1 class="reveal">{t.servicesTitle}</h1>
+    <p class="reveal">{t.servicesIntro}</p>
+  </section>
+  <section class="service-list shell">
+    {services.map(([number, title, copy]) => <article class="service-row reveal"><span>{number}</span><h2>{title}</h2><p>{copy}</p><Icon name="arrow" /></article>)}
+  </section>
+  <section class="process-section shell">
+    <header class="section-heading reveal"><div><span class="section-number">02</span><h2>{locale === 'pt' ? 'Como funciona' : 'How it works'}</h2></div></header>
+    <div class="process-grid">{steps.map(([title, copy], index) => <article class="reveal"><span>0{index + 1}</span><h3>{title}</h3><p>{copy}</p></article>)}</div>
+  </section>
+  <section class="contact-section shell compact-contact">
+    <span class="eyebrow reveal">{locale === 'pt' ? 'Primeiro passo' : 'First step'}</span>
+    <h2 class="reveal">{locale === 'pt' ? 'Conte o que você precisa resolver.' : 'Tell me what you need to solve.'}</h2>
+    <a class="contact-email reveal" href="mailto:1caua.rocha@gmail.com?subject=Rocha%20Digital%20Studio"><span>{t.email}</span><Icon name="arrow" size={32} /></a>
+  </section>
+</BaseLayout>

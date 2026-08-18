@@ -1,0 +1,31 @@
+---
+import Icon from './Icon.astro';
+import type { Locale } from '../lib/i18n';
+import { localePath, ui } from '../lib/i18n';
+
+interface Props {
+  project: { id: string; data: { title: string; summary: string; eyebrow: string; stack: string[]; translationKey: string; imageFit: 'cover' | 'contain'; images: Array<{ src: string; alt: string }> } };
+  locale: Locale;
+  index: number;
+}
+const { project, locale, index } = Astro.props;
+const slug = project.id.split('/').pop()?.replace(/\.mdx?$/, '') ?? project.data.translationKey;
+const themes = ['sand', 'ink', 'coral'];
+---
+<article class={`project-card theme-${themes[index % themes.length]} reveal`} data-tilt>
+  <a class="project-card-link" href={localePath(locale, `projects/${slug}`)} aria-label={`${ui[locale].viewCase}: ${project.data.title}`}>
+    <div class:list={["project-visual", { "has-project-image": project.data.images.length > 0, "image-contain": project.data.imageFit === 'contain' }]}>
+      <span class="visual-index">0{index + 1}</span>
+      {project.data.images[0] ? <img src={project.data.images[0].src} alt={project.data.images[0].alt} loading="lazy" decoding="async" /> : <><div class="visual-orbit"></div><div class="visual-window"><span></span><span></span><span></span></div></>}
+    </div>
+    <div class="project-copy">
+      <div class="project-meta"><span>{project.data.eyebrow}</span><span>0{index + 1}</span></div>
+      <h3>{project.data.title}</h3>
+      <p>{project.data.summary}</p>
+      <div class="project-bottom">
+        <ul aria-label="Stack">{project.data.stack.slice(0, 4).map((item) => <li>{item}</li>)}</ul>
+        <span class="round-arrow"><Icon name="arrow" /></span>
+      </div>
+    </div>
+  </a>
+</article>

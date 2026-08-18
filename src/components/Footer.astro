@@ -1,0 +1,19 @@
+---
+import type { Locale } from '../lib/i18n';
+import { ui } from '../lib/i18n';
+import Icon from './Icon.astro';
+const { locale } = Astro.props as { locale: Locale };
+const t = ui[locale];
+---
+<footer class="site-footer">
+  <div>
+    <a class="footer-mark" href="#top">CR<span>.</span></a>
+    <p>{t.footer}</p>
+  </div>
+  <div class="social-links">
+    <a href="https://github.com/cauarocha1" target="_blank" rel="noreferrer" aria-label="GitHub"><Icon name="github" /></a>
+    <a href="https://linkedin.com/in/rochacaua/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><Icon name="linkedin" /></a>
+    <a href="mailto:1caua.rocha@gmail.com" aria-label="Email"><Icon name="mail" /></a>
+  </div>
+  <p class="copyright">© {new Date().getFullYear()} Cauã Rocha</p>
+</footer>
