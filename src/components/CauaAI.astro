@@ -5,8 +5,27 @@ const apiUrl = import.meta.env.DEV
 ---
 
 <div
+  class="caua-ai-widget-host"
   data-caua-ai-widget
   data-api-url={apiUrl}
   data-initially-open="false"
 ></div>
 <script is:inline type="module" src="/widgets/caua-ai/caua-ai-widget.js"></script>
+
+<style>
+  .caua-ai-widget-host {
+    position: fixed;
+    right: clamp(1rem, 3vw, 2rem);
+    bottom: clamp(1rem, 3vw, 2rem);
+    z-index: 1000;
+    width: min(430px, calc(100vw - 2rem));
+  }
+
+  @media (max-width: 800px) {
+    .caua-ai-widget-host {
+      right: 0.75rem;
+      bottom: 0.75rem;
+      width: calc(100vw - 1.5rem);
+    }
+  }
+</style>
