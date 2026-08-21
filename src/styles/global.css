@@ -76,7 +76,7 @@ button { font: inherit; }
 .project-visual.has-project-image { background: #d9d2c3; }
 .project-visual.has-project-image img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .65s cubic-bezier(.2,.8,.2,1), filter .35s ease; }
 .project-visual.has-project-image::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(23,23,19,.04), transparent 55%, rgba(23,23,19,.13)); }
-.project-visual.has-project-image.image-contain { padding: 12%; background: #f5f1e6; }
+.project-visual.has-project-image.image-contain { height: auto; aspect-ratio: 16 / 9; padding: 0; background: #f5f1e6; }
 .project-visual.has-project-image.image-contain img { object-fit: contain; }
 .project-card:hover .project-visual.has-project-image img { transform: scale(1.025); filter: saturate(1.04); }
 .project-visual.has-project-image .visual-index { color: var(--ink); padding: 5px 8px; background: rgba(248,246,240,.82); backdrop-filter: blur(8px); }
