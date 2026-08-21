@@ -8,7 +8,11 @@ category: IA aplicada
 stack: [Python, FastAPI, Gemini, RAG, PostgreSQL, React]
 featured: true
 imageFit: contain
-images: []
+images:
+  - src: /images/projects/caua-ai/architecture.svg
+    alt: Mapa visual da arquitetura do Cauã AI, do widget no portfólio ao RAG, Gemini e PostgreSQL.
+  - src: /images/projects/caua-ai/widget-preview.svg
+    alt: Prévia visual do widget Cauã AI em uma interface inspirada em terminal.
 order: 4
 ---
 

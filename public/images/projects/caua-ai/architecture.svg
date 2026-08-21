@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Cauã AI system map</title>
+  <desc id="desc">Portfolio widget connected to a FastAPI service, retrieval augmented generation, Gemini and PostgreSQL.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fbf8f0"/>
+      <stop offset="1" stop-color="#e8dfcf"/>
+    </linearGradient>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#13201d"/>
+      <stop offset="1" stop-color="#07100e"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#171b18" flood-opacity=".18"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="m0 0 10 5-10 5Z" fill="#e15a3d"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#paper)"/>
+  <circle cx="1430" cy="120" r="180" fill="#d7e94d" opacity=".3"/>
+  <circle cx="1450" cy="125" r="112" fill="none" stroke="#171b18" stroke-opacity=".16"/>
+  <text x="96" y="92" fill="#e15a3d" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="4">CAUÃ AI / SYSTEM MAP</text>
+  <text x="96" y="160" fill="#151b18" font-family="Arial,sans-serif" font-size="54" font-weight="700">A portfolio that can answer itself.</text>
+  <text x="96" y="204" fill="#59605a" font-family="Arial,sans-serif" font-size="22">One public knowledge layer, one protected API, one focused interface.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="80" y="280" width="1440" height="500" rx="28" fill="url(#ink)"/>
+    <path d="M120 344h1360" stroke="#d8ffe0" stroke-opacity=".14"/>
+    <circle cx="122" cy="316" r="7" fill="#e15a3d"/><circle cx="146" cy="316" r="7" fill="#d7e94d"/><circle cx="170" cy="316" r="7" fill="#8ee68a"/>
+    <text x="210" y="325" fill="#9ab5a0" font-family="monospace" font-size="15" letter-spacing="2">CAUA_AI / REQUEST FLOW</text>
+
+    <g font-family="Arial,sans-serif">
+      <rect x="130" y="408" width="254" height="170" rx="18" fill="#f5f1e6"/>
+      <text x="158" y="450" fill="#e15a3d" font-size="14" font-weight="700" letter-spacing="2">01 / VISITOR</text>
+      <text x="158" y="497" fill="#151b18" font-size="27" font-weight="700">cauarocha.dev</text>
+      <text x="158" y="535" fill="#59605a" font-size="17">Question from the portfolio</text>
+
+      <rect x="474" y="408" width="254" height="170" rx="18" fill="#b9e8a5"/>
+      <text x="502" y="450" fill="#305b38" font-size="14" font-weight="700" letter-spacing="2">02 / WIDGET</text>
+      <text x="502" y="497" fill="#13201d" font-size="27" font-weight="700">React + TypeScript</text>
+      <text x="502" y="535" fill="#46634c" font-size="17">Streaming interface / SSE</text>
+
+      <rect x="818" y="408" width="254" height="170" rx="18" fill="#e15a3d"/>
+      <text x="846" y="450" fill="#ffe9de" font-size="14" font-weight="700" letter-spacing="2">03 / API</text>
+      <text x="846" y="497" fill="#fffaf2" font-size="27" font-weight="700">FastAPI</text>
+      <text x="846" y="535" fill="#ffe9de" font-size="17">Auth / rate limit / citations</text>
+
+      <rect x="1162" y="382" width="286" height="222" rx="18" fill="#203b32" stroke="#8ee68a" stroke-opacity=".7"/>
+      <text x="1192" y="425" fill="#8ee68a" font-size="14" font-weight="700" letter-spacing="2">04 / KNOWLEDGE</text>
+      <text x="1192" y="470" fill="#d8ffe0" font-size="27" font-weight="700">RAG + Gemini</text>
+      <text x="1192" y="510" fill="#9ab5a0" font-size="17">Semantic + keyword search</text>
+      <text x="1192" y="540" fill="#9ab5a0" font-size="17">Public sources / provenance</text>
+      <text x="1192" y="570" fill="#9ab5a0" font-size="17">No secret reaches the browser</text>
+    </g>
+
+    <path d="M390 493h72" stroke="#e15a3d" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M734 493h72" stroke="#e15a3d" stroke-width="3" marker-end="url(#arrow)"/>
+    <path d="M1078 493h66" stroke="#e15a3d" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <rect x="130" y="650" width="1318" height="76" rx="14" fill="#0d1714" stroke="#d8ffe0" stroke-opacity=".16"/>
+    <text x="164" y="697" fill="#8ee68a" font-family="monospace" font-size="19">POSTGRESQL / persisted sessions</text>
+    <text x="820" y="697" fill="#9ab5a0" font-family="monospace" font-size="19">protected backend · public citations · versioned API</text>
+  </g>
+</svg>
