@@ -8,11 +8,7 @@ category: Applied AI
 stack: [Python, FastAPI, Gemini, RAG, PostgreSQL, React]
 featured: true
 imageFit: contain
-images:
-  - src: /images/projects/caua-ai/widget-launcher.png
-    alt: Cauã AI widget open over the portfolio with its terminal interface and access button.
-  - src: /images/projects/caua-ai/widget-conversation.png
-    alt: Cauã AI conversation showing a grounded answer with public portfolio sources.
+images: []
 order: 4
 ---
 
