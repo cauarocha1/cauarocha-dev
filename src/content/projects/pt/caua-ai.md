@@ -13,7 +13,7 @@ images:
     alt: Mapa visual da arquitetura do Cauã AI, do widget no portfólio ao RAG, Gemini e PostgreSQL.
   - src: /images/projects/caua-ai/widget-preview.svg
     alt: Prévia visual do widget Cauã AI em uma interface inspirada em terminal.
-order: 4
+order: 1
 ---
 
 Cauã AI é o assistente virtual do próprio portfólio. O projeto transforma o conteúdo público de Cauã Rocha em uma experiência conversacional, capaz de explicar projetos, experiências e serviços com base em fontes revisadas — sem depender de respostas soltas ou de uma busca aberta.
