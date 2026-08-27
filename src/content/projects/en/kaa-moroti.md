@@ -6,7 +6,7 @@ summary: A gamified platform that makes measuring and reducing an ecological foo
 eyebrow: Gamified environmental education
 category: Web product
 stack: [React 19, TypeScript, Firebase, Tailwind CSS, GitHub Actions]
-featured: true
+featured: false
 live: https://kaamoroti.web.app/home
 images:
   - src: /images/projects/kaa-moroti/landing.png
@@ -15,7 +15,7 @@ images:
     alt: Ka'a Morotĩ dashboard with navigation to the quiz, challenges, ranking, and progress
   - src: /images/projects/kaa-moroti/quiz.png
     alt: Ka'a Morotĩ quiz asking about the user's main daily mode of transport
-order: 2
+order: 4
 ---
 
 The starting point was an experience problem: measuring an ecological footprint often requires prior knowledge and involves tools that are not engaging. This makes it harder for people to understand their impact and sustain better habits.
