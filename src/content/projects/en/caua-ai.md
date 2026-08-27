@@ -13,7 +13,7 @@ images:
     alt: Visual map of the Cauã AI architecture, from the portfolio widget to RAG, Gemini, and PostgreSQL.
   - src: /images/projects/caua-ai/widget-preview.svg
     alt: Visual preview of the Cauã AI widget in a terminal-inspired interface.
-order: 4
+order: 1
 ---
 
 Cauã AI is the portfolio's own virtual assistant. The project turns Cauã Rocha's public content into a conversational experience that can explain projects, experience, and services from reviewed sources instead of relying on unsupported answers or open web search.
