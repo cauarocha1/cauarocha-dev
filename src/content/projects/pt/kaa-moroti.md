@@ -6,7 +6,7 @@ summary: Plataforma gamificada que torna a medição e a redução da pegada eco
 eyebrow: Educação ambiental gamificada
 category: Produto web
 stack: [React 19, TypeScript, Firebase, Tailwind CSS, GitHub Actions]
-featured: true
+featured: false
 live: https://kaamoroti.web.app/home
 images:
   - src: /images/projects/kaa-moroti/landing.png
@@ -15,7 +15,7 @@ images:
     alt: Dashboard do Ka'a Morotĩ com navegação para quiz, desafios, ranking e progresso
   - src: /images/projects/kaa-moroti/quiz.png
     alt: Quiz do Ka'a Morotĩ perguntando sobre o meio de transporte diário
-order: 2
+order: 4
 ---
 
 O ponto de partida foi um problema de experiência: medir a pegada ecológica costuma exigir conhecimento prévio e ferramentas pouco convidativas. Isso reduz o interesse em entender o próprio impacto e manter hábitos de redução.

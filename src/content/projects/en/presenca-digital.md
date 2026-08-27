@@ -13,7 +13,7 @@ images:
     alt: Auto Escola Poderosa landing page with the main headline, WhatsApp and services actions, and a location card
   - src: /images/projects/autoescola/logo.webp
     alt: Auto Escola Poderosa logo with a road crossing the brand name
-order: 1
+order: 3
 ---
 
 Auto Escola Poderosa did not have its own web presence and relied on social platforms for digital communication. This made search discovery harder and meant conversations often started without context about the service the visitor needed.

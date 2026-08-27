@@ -9,5 +9,14 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      proxy: {
+        '/_caua-ai': {
+          target: 'https://api.cauarocha.dev',
+          changeOrigin: true,
+          rewrite: (path) => path.replace(/^\/_caua-ai/, ''),
+        },
+      },
+    },
   },
 });

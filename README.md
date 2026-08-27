@@ -31,10 +31,10 @@ Os headers de segurança e cache ficam em `public/_headers`.
 
 ## Conteúdo
 
-Os projetos vivem em `src/content/projects/{pt,en}`. Um projeto só deve receber cargo, período, cliente ou impacto quando esses dados estiverem confirmados.
+Os projetos vivem em `src/content/projects/{pt,en}`. Um projeto só deve receber cargo, período, cliente ou impacto quando esses dados estiverem confirmados. Os destaques atuais são Cauã AI, Marisa Assistant e Auto Escola Poderosa.
 
 ## Pendências editoriais
 
-- imagens adicionais da Jornada dos Sonhos e da Auto Escola Poderosa
+- imagens adicionais do Marisa Assistant e da Jornada dos Sonhos
 - credencial e provedor final de analytics
 - detalhes adicionais de cases aprovados para publicação

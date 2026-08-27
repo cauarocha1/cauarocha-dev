@@ -6,9 +6,9 @@ summary: A local assistant built to learn how to guide LLMs, structure prompts, 
 eyebrow: Local AI & agents
 category: AI
 stack: [Python, Streamlit, Ollama, LLMs, Local knowledge base]
-featured: true
+featured: false
 repo: https://github.com/cauarocha1/JornadaDosSonhos
-order: 3
+order: 5
 ---
 
 Jornada dos Sonhos began as an applied learning project: understanding how to guide language models, work with agents, and organize prompts so the technology can become a useful application rather than just a demonstration.
