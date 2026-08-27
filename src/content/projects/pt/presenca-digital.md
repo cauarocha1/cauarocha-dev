@@ -13,7 +13,7 @@ images:
     alt: Página inicial da Auto Escola Poderosa com chamada principal, botões para WhatsApp e serviços e card de localização
   - src: /images/projects/autoescola/logo.webp
     alt: Logotipo da Auto Escola Poderosa com o nome atravessado por uma estrada
-order: 1
+order: 3
 ---
 
 A Auto Escola Poderosa não tinha uma presença própria na web e concentrava sua comunicação digital nas redes sociais. Isso dificultava a descoberta por busca e levava os atendimentos a começarem sem contexto sobre o serviço procurado.
