@@ -57620,8 +57620,8 @@ function vte({
       /* @__PURE__ */ N.jsxs("div", { className: "terminal-brand", children: [
         /* @__PURE__ */ N.jsx(Xw, { "aria-hidden": "true" }),
         /* @__PURE__ */ N.jsxs("div", { children: [
-          /* @__PURE__ */ N.jsx("strong", { children: "caua_ai.exe" }),
-          /* @__PURE__ */ N.jsx("span", { children: "portfolio assistant / v1.0" })
+          /* @__PURE__ */ N.jsx("strong", { children: "Cauã AI" }),
+          /* @__PURE__ */ N.jsx("span", { children: "assistente do portfólio" })
         ] })
       ] }),
       /* @__PURE__ */ N.jsxs("div", { className: "window-actions", children: [
