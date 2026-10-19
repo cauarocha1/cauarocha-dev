@@ -15,7 +15,7 @@ images:
     alt: Dashboard do Ka'a Morotĩ com navegação para quiz, desafios, ranking e progresso
   - src: /images/projects/kaa-moroti/quiz.png
     alt: Quiz do Ka'a Morotĩ perguntando sobre o meio de transporte diário
-order: 4
+order: 5
 ---
 
 O ponto de partida foi um problema de experiência: medir a pegada ecológica costuma exigir conhecimento prévio e ferramentas pouco convidativas. Isso reduz o interesse em entender o próprio impacto e manter hábitos de redução.

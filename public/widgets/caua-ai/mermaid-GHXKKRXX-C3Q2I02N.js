@@ -57618,7 +57618,7 @@ function vte({
     /* @__PURE__ */ N.jsx("div", { className: "scanlines", "aria-hidden": "true" }),
     /* @__PURE__ */ N.jsxs("header", { className: "terminal-titlebar", children: [
       /* @__PURE__ */ N.jsxs("div", { className: "terminal-brand", children: [
-        /* @__PURE__ */ N.jsx(Xw, { "aria-hidden": "true" }),
+        /* @__PURE__ */ N.jsx("span", { className: "terminal-monogram", "aria-hidden": "true", children: "CR." }),
         /* @__PURE__ */ N.jsxs("div", { children: [
           /* @__PURE__ */ N.jsx("strong", { children: "Cauã AI" }),
           /* @__PURE__ */ N.jsx("span", { children: "assistente do portfólio" })
@@ -57736,10 +57736,12 @@ function vte({
         /* @__PURE__ */ N.jsx("span", { children: v ? `sessão ${v.slice(-8)}` : "nova sessão" })
       ] })
     ] })
-  ] }) : /* @__PURE__ */ N.jsxs("button", { className: "terminal-launcher", onClick: () => s(!0), type: "button", children: [
-    /* @__PURE__ */ N.jsx(Xw, { "aria-hidden": "true" }),
-    /* @__PURE__ */ N.jsx("span", { children: "Abrir Cauã AI" }),
-    /* @__PURE__ */ N.jsx("i", { "aria-hidden": "true" })
+  ] }) : /* @__PURE__ */ N.jsxs("button", { "aria-label": "Abrir Cauã AI", className: "terminal-launcher", onClick: () => s(!0), type: "button", children: [
+    /* @__PURE__ */ N.jsx("span", { className: "launcher-monogram", "aria-hidden": "true", children: "CR." }),
+    /* @__PURE__ */ N.jsxs("span", { className: "launcher-copy", children: [
+      /* @__PURE__ */ N.jsx("strong", { children: "Fale com o Cauã AI" }),
+      /* @__PURE__ */ N.jsx("small", { children: "assistente do portfólio" })
+    ] })
   ] });
 }
 function Tte(e, t) {

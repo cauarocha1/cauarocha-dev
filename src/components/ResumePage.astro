@@ -22,6 +22,69 @@ const education = locale === 'pt' ? [
   { school: 'Federal University of Lavras (UFLA)', course: 'B.Sc. in Information Systems', period: 'Mar 2026 — Dec 2029 (expected)' },
   { school: 'Etec de Hortolândia', course: 'Technical Degree in Systems Development', period: '2023 — 2025' },
 ];
+const projects = locale === 'pt' ? [
+  {
+    title: "Ka'a Morotĩ - Plataforma Gamificada de Educação Ambiental",
+    period: '2025',
+    stack: 'React 19, TypeScript, Firebase, Tailwind CSS, GitHub Actions',
+    detail: 'Aplicação full stack com autenticação, quiz de pegada ecológica, recomendações personalizadas, desafios, ranking e painel de progresso; deploys de produção e de pull requests automatizados.',
+  },
+  {
+    title: 'Pipeline ETL de Dados de Moedas',
+    period: '2026',
+    stack: 'Python, Pandas, API REST, SQLite, SQL',
+    detail: 'Pipeline que coleta cotações em tempo real, normaliza registros JSON com Pandas e persiste os resultados em SQLite, com logs de execução.',
+  },
+  {
+    title: 'Jornada dos Sonhos - Assistente Financeiro com IA Local',
+    period: '2026',
+    stack: 'Python, Streamlit, Ollama, prompts para LLMs, base de conhecimento local',
+    detail: 'Assistente conversacional em Streamlit que constrói contexto a partir de dados e documentos locais, conecta-se a modelos hospedados localmente via Ollama e usa prompts de sistema estruturados.',
+  },
+  {
+    title: 'NEURON - Plataforma Interna de Gestão de Projetos',
+    period: '2026',
+    stack: 'Next.js, Supabase',
+    detail: 'Plataforma interna do Núcleo de Estudos da UFLA em Robótica Interativa para centralizar projetos, equipes, responsabilidades e tarefas. Reúne visão geral e fluxo Kanban para acompanhar etapas, próximos passos e andamento das frentes.',
+  },
+  {
+    title: 'Service Desk - Portal de Atendimento de TI',
+    period: '2026',
+    stack: 'Next.js, TypeScript, Tailwind CSS, shadcn/ui, PostgreSQL, Prisma, Better Auth, Docker',
+    detail: 'Portal web em piloto para organizar solicitações de suporte, fila e atribuição de técnicos. Inclui conversa e histórico dos chamados, SLAs, inventário de equipamentos, relatórios, anexos e chat interno da equipe.',
+  },
+] : [
+  {
+    title: "Ka'a Morotĩ - Gamified Environmental Education Platform",
+    period: '2025',
+    stack: 'React 19, TypeScript, Firebase, Tailwind CSS, GitHub Actions',
+    detail: 'Full-stack application with authentication, ecological-footprint quiz, personalized recommendations, challenges, ranking, and progress dashboard, with automated production and pull-request deployments.',
+  },
+  {
+    title: 'Currency Data ETL Pipeline',
+    period: '2026',
+    stack: 'Python, Pandas, REST API, SQLite, SQL',
+    detail: 'Pipeline that collects real-time exchange rates, normalizes JSON records with Pandas, and stores results in SQLite with execution logs.',
+  },
+  {
+    title: 'Jornada dos Sonhos - Local AI Financial Assistant',
+    period: '2026',
+    stack: 'Python, Streamlit, Ollama, LLM prompts, local knowledge base',
+    detail: 'Streamlit conversational assistant that builds context from local data and documents, connects to locally hosted models through Ollama, and uses structured system prompts.',
+  },
+  {
+    title: 'NEURON - Internal Project Management Platform',
+    period: '2026',
+    stack: 'Next.js, Supabase',
+    detail: 'Internal platform for the UFLA Interactive Robotics Study Group to centralize projects, teams, ownership, and tasks. It combines an overview and Kanban workflow to track stages, next steps, and progress across workstreams.',
+  },
+  {
+    title: 'Service Desk - IT Support Portal',
+    period: '2026',
+    stack: 'Next.js, TypeScript, Tailwind CSS, shadcn/ui, PostgreSQL, Prisma, Better Auth, Docker',
+    detail: 'Web portal in pilot to organize support requests, the service queue, and technician assignment. Includes ticket conversations and history, SLAs, equipment inventory, reports, attachments, and an internal team chat.',
+  },
+];
 ---
 <BaseLayout {locale} title={`${t.resumeTitle} — Cauã Rocha`} alternatePath="resume">
   <section class="page-hero resume-hero shell">
@@ -34,8 +97,9 @@ const education = locale === 'pt' ? [
     <div class="resume-identity"><span>Software Developer<br />& Data Enthusiast</span><p>cauarocha.dev<br />Lavras, MG — Brasil</p></div>
     <div class="resume-block"><span>01</span><div><h2>{locale === 'pt' ? 'Perfil' : 'Profile'}</h2><p>{t.aboutText}</p></div></div>
     <div class="resume-block"><span>02</span><div><h2>{locale === 'pt' ? 'Experiência' : 'Experience'}</h2><div class="resume-timeline">{experience.map((item) => <article><div><h3>{item.company}</h3><span>{item.period}</span></div><strong>{item.role}</strong><p>{item.detail}</p></article>)}</div></div></div>
-    <div class="resume-block"><span>03</span><div><h2>{locale === 'pt' ? 'Formação' : 'Education'}</h2><div class="resume-timeline compact">{education.map((item) => <article><div><h3>{item.school}</h3><span>{item.period}</span></div><strong>{item.course}</strong></article>)}</div></div></div>
-    <div class="resume-block"><span>04</span><div><h2>{locale === 'pt' ? 'Áreas de atuação' : 'Areas of work'}</h2><ul>{focus.map((item) => <li>{item}</li>)}</ul></div></div>
-    <div class="resume-block"><span>05</span><div><h2>Links</h2><div class="resume-links"><a href="mailto:1caua.rocha@gmail.com">Email <Icon name="external" /></a><a href="https://github.com/cauarocha1">GitHub <Icon name="external" /></a><a href="https://linkedin.com/in/rochacaua/">LinkedIn <Icon name="external" /></a></div></div></div>
+    <div class="resume-block"><span>03</span><div><h2>{locale === 'pt' ? 'Projetos em destaque' : 'Featured projects'}</h2><div class="resume-timeline">{projects.map((item) => <article><div><h3>{item.title}</h3><span>{item.period}</span></div>{item.stack && <strong>{item.stack}</strong>}<p>{item.detail}</p></article>)}</div></div></div>
+    <div class="resume-block"><span>04</span><div><h2>{locale === 'pt' ? 'Formação' : 'Education'}</h2><div class="resume-timeline compact">{education.map((item) => <article><div><h3>{item.school}</h3><span>{item.period}</span></div><strong>{item.course}</strong></article>)}</div></div></div>
+    <div class="resume-block"><span>05</span><div><h2>{locale === 'pt' ? 'Áreas de atuação' : 'Areas of work'}</h2><ul>{focus.map((item) => <li>{item}</li>)}</ul></div></div>
+    <div class="resume-block"><span>06</span><div><h2>Links</h2><div class="resume-links"><a href="mailto:1caua.rocha@gmail.com">Email <Icon name="external" /></a><a href="https://github.com/cauarocha1">GitHub <Icon name="external" /></a><a href="https://linkedin.com/in/rochacaua/">LinkedIn <Icon name="external" /></a></div></div></div>
   </section>
 </BaseLayout>

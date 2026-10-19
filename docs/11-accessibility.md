@@ -13,6 +13,9 @@ O site deve ser agradável e usável sem depender de efeitos visuais.
 - alt text descritivo
 - labels em formulários
 - estrutura semântica
+- botão do Cauã AI com nome acessível nos estados inicial e minimizado; monograma `CR.` decorativo
+- controles com área de toque confortável no celular e convite recolhível sem remover o acesso ao assistente
+- conteúdo prioritário (ações, cards, e-mail e rodapé) sem sobreposição do convite flutuante
 
 ## Motion
 

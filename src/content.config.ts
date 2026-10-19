@@ -15,6 +15,7 @@ const projects = defineCollection({
     repo: z.string().url().optional(),
     live: z.string().url().optional(),
     imageFit: z.enum(['cover', 'contain']).default('cover'),
+    galleryFit: z.enum(['cover', 'contain']).default('cover'),
     images: z.array(z.object({
       src: z.string(),
       alt: z.string(),

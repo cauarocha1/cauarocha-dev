@@ -6,14 +6,14 @@ summary: A landing page that established a complete web presence and routes each
 eyebrow: Digital presence
 category: Commercial
 stack: [Astro, Web Design, SEO, CTA Architecture]
-featured: true
+featured: false
 live: https://autoescola-poderosa.vercel.app/
 images:
   - src: /images/projects/autoescola/landing.png
     alt: Auto Escola Poderosa landing page with the main headline, WhatsApp and services actions, and a location card
   - src: /images/projects/autoescola/logo.webp
     alt: Auto Escola Poderosa logo with a road crossing the brand name
-order: 3
+order: 7
 ---
 
 Auto Escola Poderosa did not have its own web presence and relied on social platforms for digital communication. This made search discovery harder and meant conversations often started without context about the service the visitor needed.

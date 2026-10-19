@@ -4,28 +4,78 @@ const apiUrl = import.meta.env.DEV
   : import.meta.env.PUBLIC_CAUA_AI_API_URL || 'https://api.cauarocha.dev';
 ---
 
-<div
-  class="caua-ai-widget-host"
-  data-caua-ai-widget
-  data-api-url={apiUrl}
-  data-initially-open="false"
-></div>
-<script is:inline type="module" src="/widgets/caua-ai/caua-ai-widget.js?v=editorial-1"></script>
+<div class="caua-ai-widget-dock">
+  <div
+    class="caua-ai-widget-host"
+    data-caua-ai-widget
+    data-api-url={apiUrl}
+    data-initially-open="false"
+  ></div>
+  <button class="caua-ai-widget-dismiss" type="button" data-caua-ai-dismiss aria-label="Recolher convite do Cauã AI" title="Recolher convite" hidden>−</button>
+</div>
+<script is:inline type="module" src="/widgets/caua-ai/caua-ai-widget.js?v=editorial-6"></script>
 
 <style>
-  .caua-ai-widget-host {
+  .caua-ai-widget-dock {
     position: fixed;
     right: clamp(1rem, 3vw, 2rem);
     bottom: clamp(1rem, 3vw, 2rem);
     z-index: 1000;
     width: min(430px, calc(100vw - 2rem));
+    pointer-events: none;
+  }
+
+  .caua-ai-widget-host {
+    position: relative;
+    width: 100%;
+    pointer-events: auto;
+  }
+
+  .caua-ai-widget-dismiss {
+    position: absolute;
+    top: -52px;
+    right: 0;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    color: var(--ink);
+    background: var(--paper-light);
+    box-shadow: 0 8px 22px rgba(23, 23, 19, .12);
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 1.35rem;
+    line-height: 1;
+  }
+
+  .caua-ai-widget-dismiss:hover {
+    color: var(--paper-light);
+    background: var(--ink);
+  }
+
+  .caua-ai-widget-dismiss:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  .caua-ai-widget-dismiss[hidden] {
+    display: none;
   }
 
   @media (max-width: 800px) {
-    .caua-ai-widget-host {
-      right: 0;
+    .caua-ai-widget-dock {
       bottom: 0;
-      width: 100vw;
+      right: 0;
+      width: 100%;
+    }
+
+    .caua-ai-widget-dismiss {
+      top: auto;
+      right: max(1rem, env(safe-area-inset-right));
+      bottom: calc(100% + 4px);
     }
   }
 </style>
