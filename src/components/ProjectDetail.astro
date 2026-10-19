@@ -21,6 +21,6 @@ const slug = project.id.split('/').pop()?.replace(/\.mdx?$/, '') ?? project.data
       <aside class="reveal"><span>{locale === 'pt' ? 'Categoria' : 'Category'}</span><strong>{project.data.category}</strong><span>Stack</span><ul>{project.data.stack.map((item) => <li>{item}</li>)}</ul></aside>
       <section class="prose reveal"><h2>{t.context}</h2><Content /><div class="case-actions">{project.data.live && <a class="button button-dark" href={project.data.live} target="_blank" rel="noreferrer">{locale === 'pt' ? 'Visitar projeto' : 'Visit project'}<Icon name="external" /></a>}{project.data.repo && <a class="button button-outline" href={project.data.repo} target="_blank" rel="noreferrer">{locale === 'pt' ? 'Abrir repositório' : 'Open repository'}<Icon name="external" /></a>}</div></section>
     </div>
-    {project.data.images.length > 1 && <section class="case-gallery" aria-label={locale === 'pt' ? 'Telas do projeto' : 'Project screens'}>{project.data.images.slice(1).map((image) => <figure class="reveal"><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /></figure>)}</section>}
+    {project.data.images.length > 1 && <section class:list={["case-gallery", { "gallery-contain": project.data.galleryFit === 'contain' }]} aria-label={locale === 'pt' ? 'Telas do projeto' : 'Project screens'}>{project.data.images.slice(1).map((image) => <figure class="reveal"><img src={image.src} alt={image.alt} loading="lazy" decoding="async" /></figure>)}</section>}
   </article>
 </BaseLayout>

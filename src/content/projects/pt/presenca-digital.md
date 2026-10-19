@@ -6,14 +6,14 @@ summary: Landing page que criou uma presença web completa e direciona cada inte
 eyebrow: Presença digital
 category: Comercial
 stack: [Astro, Web Design, SEO, Arquitetura de CTA]
-featured: true
+featured: false
 live: https://autoescola-poderosa.vercel.app/
 images:
   - src: /images/projects/autoescola/landing.png
     alt: Página inicial da Auto Escola Poderosa com chamada principal, botões para WhatsApp e serviços e card de localização
   - src: /images/projects/autoescola/logo.webp
     alt: Logotipo da Auto Escola Poderosa com o nome atravessado por uma estrada
-order: 3
+order: 7
 ---
 
 A Auto Escola Poderosa não tinha uma presença própria na web e concentrava sua comunicação digital nas redes sociais. Isso dificultava a descoberta por busca e levava os atendimentos a começarem sem contexto sobre o serviço procurado.

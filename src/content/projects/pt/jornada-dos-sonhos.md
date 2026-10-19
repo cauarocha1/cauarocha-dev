@@ -8,7 +8,7 @@ category: IA
 stack: [Python, Streamlit, Ollama, LLMs, Base local]
 featured: false
 repo: https://github.com/cauarocha1/JornadaDosSonhos
-order: 5
+order: 6
 ---
 
 Jornada dos Sonhos nasceu como um projeto de aprendizado aplicado: entender como orientar modelos de linguagem, manipular agentes e organizar prompts para que a tecnologia deixe de ser apenas uma demonstração e se torne uma aplicação útil.

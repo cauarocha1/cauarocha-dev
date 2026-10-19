@@ -9,7 +9,7 @@ stack: [Python, FastAPI, Gemini, Telegram, Supabase, CalDAV]
 featured: true
 repo: https://github.com/cauarocha1/marisa-assistant
 live: https://marisa-assistant.onrender.com/
-order: 2
+order: 3
 ---
 
 O Marisa Assistant foi criado para unir organização acadêmica e controle financeiro em uma conversa simples pelo Telegram. O Gemini interpreta cada pedido e aciona somente as operações permitidas pelo agente.

@@ -41,6 +41,15 @@ O material converge para quatro linhas principais:
 - graduação em Sistemas de Informação na UFLA, com previsão de conclusão em dezembro de 2029
 - Técnico em Desenvolvimento de Sistemas pela Etec de Hortolândia, concluído em 2025
 
+## Projetos adicionados em 01/10/2026
+
+As descrições abaixo foram incluídas no currículo PT/EN a partir do perfil exportado do LinkedIn, das capturas fornecidas e da documentação local do Service Desk.
+
+- **NEURON - Plataforma Interna de Gestão de Projetos:** plataforma interna do Núcleo de Estudos da UFLA em Robótica Interativa para centralizar projetos, equipes, responsabilidades e tarefas, com visão geral, fluxo Kanban e painel agregado para TV. As capturas do sistema confirmam Next.js e Supabase. Stack registrada: Next.js e Supabase.
+- **Service Desk - Portal de Atendimento de TI:** portal em piloto para organizar solicitações de suporte, fila e atribuição, conversa e histórico dos chamados, SLAs, inventário de equipamentos, relatórios, anexos e chat da equipe. Stack documentada: Next.js, TypeScript, Tailwind CSS, shadcn/ui, PostgreSQL, Prisma, Better Auth e Docker.
+
+As capturas do Service Desk contêm informações de chamados e da rede interna. O currículo descreve apenas funcionalidades do produto e não reproduz esses dados.
+
 ## Problemas e objetivos confirmados dos projetos
 
 - Ka'a Morotĩ: tornar a medição e a redução da pegada ecológica menos complexa e mais motivadora por meio de quiz, pontuação, desafios, ranking e acompanhamento de progresso

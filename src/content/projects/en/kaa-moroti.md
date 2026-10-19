@@ -15,7 +15,7 @@ images:
     alt: Ka'a Morotĩ dashboard with navigation to the quiz, challenges, ranking, and progress
   - src: /images/projects/kaa-moroti/quiz.png
     alt: Ka'a Morotĩ quiz asking about the user's main daily mode of transport
-order: 4
+order: 5
 ---
 
 The starting point was an experience problem: measuring an ecological footprint often requires prior knowledge and involves tools that are not engaging. This makes it harder for people to understand their impact and sustain better habits.

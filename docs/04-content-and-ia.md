@@ -26,11 +26,19 @@ Componentes esperados:
 
 Os projetos devem ser organizados por intenção, não por vaidade visual.
 
-Ordem dos projetos em destaque:
+Ordem editorial da listagem, da maior complexidade técnica e amplitude funcional aos projetos mais focados:
 
-1. Auto Escola Poderosa
-2. Ka'a Morotĩ
-3. Jornada dos Sonhos
+1. Cauã AI
+2. Service Desk
+3. Marisa Assistant
+4. NEURON
+5. Ka'a Morotĩ
+6. Jornada dos Sonhos
+7. Auto Escola Poderosa
+
+O critério considera stack, integrações, fluxos implementados e evidências de uso ou publicação disponíveis no projeto. A grade mantém duas colunas em telas largas e passa a uma coluna em telas estreitas.
+
+Na Home, os quatro primeiros projetos dessa ordem aparecem em destaque, na mesma sequência e em uma grade 2 × 2.
 
 Categorias sugeridas:
 

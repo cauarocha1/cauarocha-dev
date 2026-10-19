@@ -39,7 +39,7 @@ Documentação inicial concluída e primeira implementação funcional criada.
 - currículo PT e EN disponível para download
 - página de currículo alinhada à experiência e formação atuais
 - decisão definitiva de não usar foto ou retrato pessoal
-- ordem dos destaques atualizada: Cauã AI, Marisa Assistant e Auto Escola Poderosa
+- destaques da Home atualizados para os quatro projetos prioritários: Cauã AI, Service Desk, Marisa Assistant e NEURON, na ordem editorial da listagem
 - navegação responsiva
 - cards reativos e cursor customizado apenas em desktop com ponteiro preciso
 - suporte a `prefers-reduced-motion`
@@ -47,6 +47,12 @@ Documentação inicial concluída e primeira implementação funcional criada.
 - headers de segurança e cache para Cloudflare Pages
 - eventos preparados para GitHub, LinkedIn, e-mail, projeto e troca de idioma
 - build estático e typecheck validados
+- widget Cauã AI com campo de mensagem contido na largura do painel e margens laterais
+- botão de abrir consistente após fechar/minimizar, com monograma `CR.`
+- cabeçalho do assistente com monograma `CR.` no lugar do retrato
+- home com copy PT/EN mais direta, espaçamento do hero ajustado para telas baixas e e-mail de contato sem atraso de reveal
+- convite do assistente ancorado no canto inferior direito, com recolhimento manual e automático perto de ações, cards e contato
+- refinamentos de contraste e áreas de toque sem alterar conteúdo ou estrutura dos cases Cauã AI e Marisa Assistant
 
 ## Pendências para lançamento
 

@@ -8,7 +8,7 @@ category: AI
 stack: [Python, Streamlit, Ollama, LLMs, Local knowledge base]
 featured: false
 repo: https://github.com/cauarocha1/JornadaDosSonhos
-order: 5
+order: 6
 ---
 
 Jornada dos Sonhos began as an applied learning project: understanding how to guide language models, work with agents, and organize prompts so the technology can become a useful application rather than just a demonstration.
